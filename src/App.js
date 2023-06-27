@@ -1,11 +1,16 @@
+import { Outlet } from 'react-router';
 import './App.css';
+import MenuBar from './components/MenuBar';
+import Sidebar from './components/Sidebar';
+import Grid from '@mui/material/Grid'
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>React is cool</h1>
-      <p>Let's learn more</p>
-    </div>
+    <Grid container >
+      <Sidebar />
+      <Outlet />
+    </Grid>
   );
 }
 
