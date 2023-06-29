@@ -4,7 +4,7 @@ import React from 'react'
 const MachineLearning = () => {
   return (
     <Grid item xs={8} >
-        MachineLearning Page
+        Machine Learning
     </Grid>
   )
 }
