@@ -1,10 +1,12 @@
 import { Grid } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
+import Header from '../../components/common/Header/Header';
 
 const Authentication = () => {
+
   return (
     <Grid item xs={8} >
-        Authentication Page
+        <Header title='Authentication'/>
     </Grid>
   )
 }

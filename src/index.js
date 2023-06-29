@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+//Page Setup
 import {
   BrowserRouter,
   Routes,
@@ -15,7 +17,13 @@ import Functions from './pages/Functions/Functions';
 import Hosting from './pages/Hosting/Hosting';
 import MachineLearning from './pages/MachineLearning/MachineLearning';
 
+//MUI Global
+import { ThemeProvider } from '@mui/material';
+import { dashboardTheme } from './dashboardTheme';
+
+
 ReactDOM.render(
+  <ThemeProvider theme={dashboardTheme} >
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
@@ -27,7 +35,8 @@ ReactDOM.render(
         <Route path='machine learning' element={<MachineLearning />} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
