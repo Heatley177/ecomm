@@ -6,16 +6,19 @@ import CommonButton from '../../components/common/CommonButton/CommonButton';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import GridWrapper from '../../components/common/GridWrapper/GridWrapper';
 import { cardHeaderStyles } from './styles';
+import NewUserModal from '../../components/Modals/NewUserModal/NewUserModal';
 
 
 const Authentication = () => {
+  const [ open, setOpen ] = useState(false);
+
   const getHeader = () => {
     const handleChange = (value) => {
       console.log(value);
     };
 
     const addUser = () => {
-      console.log('click')
+      setOpen(true);
     };
 
 
@@ -56,7 +59,12 @@ const Authentication = () => {
     <GridWrapper>
       <BasicCard 
         header={getHeader()}
-        content={getContent()} />
+        content={getContent()} 
+      />
+      <NewUserModal 
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </GridWrapper>
   )
 }
