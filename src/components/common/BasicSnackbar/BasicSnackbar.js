@@ -19,7 +19,7 @@ const BasicSnackbar = ({ open, onClose, severity, message }) => {
                 onClose={onClose} 
                 severity={severity} 
             >
-            {message}
+                {message}
             </Alert>
         </Snackbar>
     </>
